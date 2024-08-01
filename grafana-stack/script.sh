@@ -1,7 +1,7 @@
 
 # Prerequisites
-# 1. Deploy EKS Cluster 
-# 2. Install ebs-csi-driver add-on
+# 1. Deploy EKS Cluster and connect to it
+# 2. Install ebs-csi-driver add-on on aws eks console
 # 3. Attach the AmazonEBSCSIDriverPolicy IAM Policy to the EKS Node Instance Role
 
 # create bucket

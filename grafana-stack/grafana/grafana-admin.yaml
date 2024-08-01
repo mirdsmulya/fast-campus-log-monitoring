@@ -1,0 +1,10 @@
+# secrets kubernetes
+apiVersion: v1
+kind: Secret
+metadata:
+  name: grafana-admin
+  namespace: monitoring
+type: Opaque
+data:
+  admin-user: bWltaW46
+  admin-password: MWI4NDUwMjA2YjQ0Y2IyYw==

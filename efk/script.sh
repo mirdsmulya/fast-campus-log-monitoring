@@ -1,19 +1,20 @@
 
 
-# 1. install ebs-csi-driver
-# 2. Attach the Required IAM Policy to the Node Instance Role
-# 3. Add helm repo
+# 1. Deploy EKS Cluster 
+# 2. install ebs-csi-driver add-on
+# 3. Attach the AmazonEBSCSIDriverPolicy IAM Policy to the Node Instance Role
+# 4. Add helm repo
 helm repo add elastic https://helm.elastic.co
 helm repo update
 
-# 4. Install elasticsearch
+# 5. Install elasticsearch
 helm upgrade --install elasticsearch elastic/elasticsearch --version 8.5.1 --namespace logging --create-namespace set replicas=3
 
 
-# 5. Install kibana
+# 6. Install kibana
 helm upgrade --install kibana elastic/kibana --version 8.5.1 --namespace logging
 
-# 6. Install fluentd
+# 7. Install fluentd
 # Update Elastic creds in fluentd.yaml
 kubectl apply -f fluentd.yaml
 

@@ -1,4 +1,8 @@
 
+# Prerequisites
+# 1. Deploy EKS Cluster 
+# 2. Install ebs-csi-driver add-on
+# 3. Attach the AmazonEBSCSIDriverPolicy IAM Policy to the EKS Node Instance Role
 
 # create bucket
 aws s3api create-bucket --bucket fastcampus-loki --region ap-southeast-1 --create-bucket-configuration LocationConstraint=ap-southeast-1

@@ -2,7 +2,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
 
-  cluster_name    = "fast-campus-cluster-y"
+  cluster_name    = "fast-campus-cluster"
   cluster_version = "1.30"
 
   cluster_endpoint_public_access  = true
@@ -15,9 +15,6 @@ module "eks" {
       most_recent = true
     }
     vpc-cni = {
-      most_recent = true
-    }
-    ebs = {
       most_recent = true
     }
   }

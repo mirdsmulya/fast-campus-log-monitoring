@@ -9,7 +9,7 @@ helm repo add elastic https://helm.elastic.co
 helm repo update
 
 # 5. Install elasticsearch
-helm upgrade --install elasticsearch elastic/elasticsearch --version 8.5.1 --namespace logging --create-namespace set replicas=3
+helm upgrade --install elasticsearch elastic/elasticsearch --version 8.5.1 --namespace logging --create-namespace 
 
 # 6. Install kibana
 helm upgrade --install kibana elastic/kibana --version 8.5.1 --namespace logging
